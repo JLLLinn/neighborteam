@@ -14,7 +14,7 @@ const schema = z.object({
   zipCode: z.string().refine((str) => { return isPostalCode(str, "US") }, { message: 'Invalid zip code' }),
 });
 
-export default function ProjectSignupForm({ project }) {
+export default function ProjectInfoCollectionForm({ project }) {
   const [active, setActive] = useState(0);
   // INPUT, SUBMITTING, SUCCESS, FAILED
   const [INPUT, SUBMITTING, SUCCESS, FAILED] = ["INPUT", "SUBMITTING", "SUCCESS", "FAILED"];
