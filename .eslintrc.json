@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "overrides": [
+    {
+      "files": ["pages/api/*.js"], 
+      "rules": {
+        "no-console": "off" // Node.js server can do console log.
+      }
+    }
+  ],
+  "extends": ["next/core-web-vitals", "airbnb"],
+  "rules": {
+    "react/react-in-jsx-scope": "off" // https://stackoverflow.com/a/61160875/18874229
+  }
 }

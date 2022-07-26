@@ -5,7 +5,7 @@ async function GetProjectDetailsForDisplay(projectId){
     const getProject = () => {
         return new Promise((resolve, reject) => {
             ddb.getItem({
-                Key: { "id": { S: projectId } },
+                Key: { "project_uuid": { S: projectId } },
                 TableName: constants.projectsTableName
             }, (err, data) => {
                 if (err) {
@@ -21,7 +21,7 @@ async function GetProjectDetailsForDisplay(projectId){
         return { notFound: true };
     }
     // Fetch data from external API
-    const data = { project: {name: project.name.S, id: project.id.S} }
+    const data = { project: {name: project.name.S, id: project.project_uuid.S} }
 
     // Pass data to the page via props
     return { props: { data } }

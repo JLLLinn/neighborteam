@@ -1,7 +1,7 @@
 const constants = {
     appNameSnake:"NeighborBrite",
     appNameLower:"neighborbrite",
-    projectsTableName: "neighborteam.projects",
+    projectsTableName: "project.properties",
     signupsTableName: "neighborteam.signups"
     
 };
